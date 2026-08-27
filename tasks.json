@@ -1,0 +1,5 @@
+[
+{ "id": 1, "description": "Buy groceries and milk", "status": "DONE", "createdAt": "27-08-2026 12:42:55", "updatedAt": "27-08-2026 12:43:13" },
+{ "id": 2, "description": "Clean my room", "status": "IN_PROGRESS", "createdAt": "27-08-2026 12:44:09", "updatedAt": "27-08-2026 12:44:26" },
+{ "id": 3, "description": "Call to Mark", "status": "TODO", "createdAt": "27-08-2026 12:44:39", "updatedAt": "27-08-2026 12:44:39" }
+]
