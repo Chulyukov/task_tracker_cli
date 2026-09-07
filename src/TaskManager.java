@@ -1,4 +1,5 @@
 import java.io.IOException;
+import java.nio.charset.StandardCharsets;
 import java.nio.file.Files;
 import java.nio.file.Path;
 import java.time.LocalDateTime;
@@ -20,7 +21,7 @@ public class TaskManager {
             return tasks;
         }
         try {
-            String content = Files.readString(FILE_PATH).trim();
+            String content = Files.readString(FILE_PATH, StandardCharsets.UTF_8).trim();
             if (content.isEmpty() || "[]".equals(content)) {
                 return tasks;
             }
@@ -111,7 +112,7 @@ public class TaskManager {
         }
         dataBuilder.append("]");
         try {
-            Files.writeString(FILE_PATH, dataBuilder.toString());
+            Files.writeString(FILE_PATH, dataBuilder.toString(), StandardCharsets.UTF_8);
         } catch (IOException e) {
             throw new RuntimeException(e);
         }
