@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 set -e
-
 mkdir -p out
-javac -d out $(find src -name "*.java")
-java -cp out CLI "$@"
+javac -encoding UTF-8 -d out $(find src -name "*.java")
+java -Dfile.encoding=UTF-8 -Dsun.jnu.encoding=UTF-8 -cp out CLI "$@"
