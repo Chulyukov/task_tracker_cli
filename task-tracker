@@ -1,5 +1,16 @@
 #!/usr/bin/env bash
 set -e
+
+# Принудительно включаем UTF-8 для окружения Linux и передачи аргументов "$@"
+export LANG=C.UTF-8
+export LC_ALL=C.UTF-8
+
 mkdir -p out
 javac -encoding UTF-8 -d out $(find src -name "*.java")
-java -Dfile.encoding=UTF-8 -Dsun.jnu.encoding=UTF-8 -cp out CLI "$@"
+
+# Указываем UTF-8 для файлов И для консольных потоков вывода Java
+java -Dfile.encoding=UTF-8 \
+     -Dsun.jnu.encoding=UTF-8 \
+     -Dstdout.encoding=UTF-8 \
+     -Dstderr.encoding=UTF-8 \
+     -cp out CLI "$@"
