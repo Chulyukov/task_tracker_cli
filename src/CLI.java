@@ -102,6 +102,16 @@ public class CLI {
                     taskManager.executeUpdate();
                     System.out.println("Task marked as in progress.");
                 }
+                case "mark-in-hold" -> {
+                    if (args.length != 2) {
+                        handleWrongCommand();
+                        return;
+                    }
+                    int id = parseId(args[1]);
+                    taskManager.markHold(id);
+                    taskManager.executeUpdate();
+                    System.out.println("Task marked as hold.");
+                }
                 case "mark-done" -> {
                     if (args.length != 2) {
                         handleWrongCommand();
