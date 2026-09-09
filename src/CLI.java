@@ -15,6 +15,7 @@ public class CLI {
                 delete <id>                Delete a task by its ID.
                 mark-in-progress <id>      Change a task status to "in-progress".
                 mark-done <id>             Change a task status to "done".
+                mark-hold <id>             Change a task status to "hold".
                 list                       List all tasks.
                 list <status>              List tasks filtered by status.
                                            Allowed statuses: todo, in-progress, done.
