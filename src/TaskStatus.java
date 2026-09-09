@@ -1,7 +1,8 @@
 public enum TaskStatus {
     TODO("Todo"),
     IN_PROGRESS("In progress"),
-    DONE("Done");
+    DONE("Done"),
+    HOLD("Hold");
 
     private final String value;
 

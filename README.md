@@ -113,6 +113,7 @@ Allowed statuses:
 - `todo`
 - `in-progress`
 - `done`
+- `hold`
 
 ### 8. Help
 
@@ -135,12 +136,14 @@ Tasks can have one of the following statuses internally:
 - `TODO`
 - `IN_PROGRESS`
 - `DONE`
+- `HOLD`
 
 The CLI accepts the user-facing lowercase values:
 
 - `todo`
 - `in-progress`
 - `done`
+- `hold`
 
 ## Example workflow
 

@@ -79,6 +79,12 @@ public class TaskManager {
         task.setUpdatedAt(LocalDateTime.now());
     }
 
+    public void markHold(int id) {
+        Task task = findById(id).orElseThrow(() -> new RuntimeException("Task with id = " + id + " is not found."));
+        task.setStatus(TaskStatus.HOLD);
+        task.setUpdatedAt(LocalDateTime.now());
+    }
+
     public List<Task> list() {
         return tasks;
     }
